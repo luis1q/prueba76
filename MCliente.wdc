@@ -1,0 +1,128 @@
+#To edit and compare internal_properties, use WINDEV integrated tools.
+#Internal properties refer to the properties of controls in windows, reports, etc.
+info :
+ name : MCliente
+ major_version : 27
+ minor_version : 0
+ type : 4
+ description : ""
+ subtype : 0
+class :
+ identifier : 0x132481c400087d0f
+ internal_properties : BwAAAAcAAAB2/vstTMCJbS/hlxjFxirSqKvCUuv8YxgpWyl7S3iA
+ code_elements :
+  type_code : 10
+  p_codes :
+   -
+     code : |1-
+      MCliente est une Classe <mapping=Cliente><§rad:1§>
+      <§rad:1§>
+      	
+      	<MAPPING><§rad:1§>
+      	m_ClienteID		est un 8-byte int	<mapping=ClienteID, clé unique>
+      	m_Nombre		est une string		<mapping=Nombre><§rad:1§>
+      	m_Apellido		est une string		<mapping=Apellido><§rad:1§>
+      	m_Direcccion	est une string		<mapping=Direcccion><§rad:1§>
+      	<FIN><§rad:1§>
+      	<§rad:1§>
+      FIN<§rad:1§>
+      <§rad:1§>
+     type : 131072
+  procedures :
+   -
+     name : Constructeur
+     procedure_id : 1379370064696409359
+     type_code : 27
+     code : |1+
+      PROCEDURE Constructeur()
+      
+     type : 589824
+   -
+     name : Destructeur
+     procedure_id : 1379370064696474895
+     type_code : 28
+     code : |1-
+      PROCEDURE Destructeur()
+     type : 655360
+   -
+     name : Lista_de_clientes
+     procedure_id : 1379370756187091181
+     type_code : 12
+     code : |1+
+      
+      procedure public global Lista_de_clientes()
+      ListaClientes est un tableau de MCliente 
+      FichierVersTableau(ListaClientes,Cliente)
+      RENVOYER(ListaClientes)
+      
+      
+      
+      
+      
+      
+      
+     type : 458752
+   -
+     name : AgregarCliente
+     procedure_id : 1379407607010417571
+     type_code : 12
+     code : |1+
+      procedure AgregarCliente()
+      MémoireVersFichier(objet,Cliente) //Guarda el objeto 
+      HAjoute(ClientE) //Guarda en la persistencia
+      
+      
+     type : 458752
+   -
+     name : ModificarCliente
+     procedure_id : 1379408633507643863
+     type_code : 12
+     code : |1+
+      procedure ModificarCliente()
+      HLitRecherchePremier(Cliente,ClienteID,m_ClienteID)
+      si hTROUVE(Cliente) ALORS
+      	MémoireVersFichier(objet,Cliente)
+      	HModifIE (Cliente)
+      FIN
+      
+      
+      
+     type : 458752
+   -
+     name : Eliminar_Cliente
+     procedure_id : 1379409973537555638
+     type_code : 12
+     code : |1-
+      procedure Eliminar_Cliente()
+      HLitRecherchePremier(Cliente,ClienteID,m_ClienteID)
+      SI HTrouve(Cliente) ALORS
+      	HSupprime(Cliente)
+      FIN
+     type : 458752
+   -
+     name : Constructor2
+     procedure_id : 1379451226710266755
+     type_code : 12
+     code : |1+
+      procedure Constructor2(ID,Nombre,Apellido,Direccion)
+      m_ClienteID=ID
+      m_Nombre=Nombre
+      m_Apellido=Apellido
+      m_Direcccion=Direccion
+      
+     type : 458752
+  procedure_templates : []
+  property_templates : []
+ code_parameters :
+  internal_properties : BwAAAAcAAAA6ih3UbgNXHwTtiPSFUEj+2fi/m7v4QV2rqidAupM=
+  original_name : Classe1
+resources :
+ string_res :
+  identifier : 0x181202850006c2e1
+  internal_properties : BwAAAAcAAAAnMYFQ1bL/vz9ehh7L22SNNSlIzGTOI8h5F/WtgDNP
+  strings :
+   -
+     text : {}
+     index : 0
+custom_note :
+ internal_properties : BwAAAAcAAABtB9HWVzrXO2+4NDRVK0vmzaNKrCKqH1DBX30lMmGZ
