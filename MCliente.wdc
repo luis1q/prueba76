@@ -111,6 +111,18 @@ class :
       m_Direcccion=Direccion
       
      type : 458752
+   -
+     name : Constructor3
+     procedure_id : 1380605219983691209
+     type_code : 12
+     code : |1+
+      PROCEDURE Constructor3(ID,Nombre,Apellido,Direccion)
+      m_ClienteID	= ID
+      m_Nombre	= Nombre
+      m_Apellido	= Apellido
+      m_Direcccion	= Direccion
+      
+     type : 458752
   procedure_templates : []
   property_templates : []
  code_parameters :
